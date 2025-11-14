@@ -1,4 +1,3 @@
----
 
 # ⭐ **Modularity in Software Engineering (Detailed Explanation)**
 
