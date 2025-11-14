@@ -1,6 +1,6 @@
 ---
 
-✅ **3P’s in Software Project Spectrum**
+**3P’s in Software Project Spectrum**
 
 In software engineering, **Pressman's Software Project Spectrum** describes three essential dimensions that determine how a software project is planned, designed, and executed.
 These are known as the **3 Ps**:

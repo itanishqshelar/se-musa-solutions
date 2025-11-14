@@ -1,9 +1,5 @@
----
-
-# ⭐ **Architectural Styles in Software Engineering**
-
 An **architectural style** defines the **structure** and **pattern** of how components in a software system are organized and how they interact.
-It acts like a *blueprint* for designing software systems.
+It acts like a _blueprint_ for designing software systems.
 
 Below are the most commonly used architectural styles:
 
