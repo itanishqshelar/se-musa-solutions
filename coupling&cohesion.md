@@ -2,81 +2,62 @@
 **Cohesion refers to how closely the functions within a module are related**, whereas **Coupling refers to how dependent one module is on another**.
 Good design aims for **high cohesion** and **low coupling**.
 
----
 
-# **1. Types of Cohesion (High to Low)**
+## **Refactoring**
+Refactoring is the process of restructuring existing code **without changing its external behavior**.  
+Its goal is to improve the **internal structure**, making the code cleaner, more efficient, and easier to maintain.
 
-### **a) Functional Cohesion (Best)**
+### **Common Refactoring Techniques**
+- Renaming variables for better clarity
+- Breaking large functions into smaller ones
+- Removing redundant or duplicate code
 
-All elements of a module work together to perform **one single, well-defined function**.
-Example: A function that calculates the sum of numbers.
-
-### **b) Sequential Cohesion**
-
-Output of one function becomes input to another inside the same module.
-Example: Read data → process it → store the result.
-
-### **c) Communicational (Informational) Cohesion**
-
-Module’s functions are grouped because they operate on the **same data set**.
-Example: A module that reads and updates the same customer record.
-
-### **d) Procedural Cohesion**
-
-Tasks are related because they must be performed in a **specific sequence**, though they perform different operations.
-Example: A routine that checks input validity and then prints a message.
-
-### **e) Temporal Cohesion**
-
-Elements are grouped because they execute during the **same time period**.
-Example: Initialization routines executed at program startup.
-
-### **f) Logical Cohesion**
-
-Elements perform logically similar tasks, and one is selected based on a condition.
-Example: A module that handles keyboard, mouse, or touch input.
-
-### **g) Coincidental Cohesion (Worst)**
-
-Elements have **no meaningful relationship** and are grouped randomly.
-Example: A module that performs logging, sorting, and printing.
+### **Key Objectives of Refactoring**
+- **Improved Readability:** Makes code easier to understand for developers.  
+- **Enhanced Maintainability:** Reduces the effort required for future modifications.  
+- **Code Reusability:** Encourages using components in multiple parts of the application.
 
 ---
 
-# **2. Types of Coupling (Low to High)**
+## **Cohesion**
+Cohesion refers to how closely related the responsibilities of a module or component are.  
+- **High cohesion** → module is focused on a single, well-defined task.  
+- **Low cohesion** → module contains unrelated or loosely connected functionality.
 
-### **a) Data Coupling (Best)**
-
-Modules communicate by passing **only necessary data**.
-Example: `add(a, b)` – only required variables are shared.
-
-### **b) Stamp Coupling**
-
-Modules share a **data structure**, even when only a part of it is needed.
-Example: Passing a whole record or object when a single field is used.
-
-### **c) Control Coupling**
-
-One module controls the behavior of another by passing **control information or flags**.
-Example: A parameter “mode = 1 for save, 2 for print”.
-
-### **d) External Coupling**
-
-Modules depend on an **external interface, protocol, or hardware**.
-Example: Two modules sharing a specific file format or communication protocol.
-
-### **e) Common Coupling**
-
-Modules share the **same global data**.
-This increases dependency and risks unintended modifications.
-Example: Multiple functions using the same global variable.
-
-### **f) Content Coupling (Worst)**
-
-One module directly **accesses or modifies** another module’s data or code.
-Example: Jumping into another module’s code segment or modifying internal variables.
+### **Types of Cohesion (Low → High)**
+1. **Coincidental Cohesion:** Elements are randomly grouped.  
+2. **Logical Cohesion:** Grouped by similar type of operations.  
+3. **Temporal Cohesion:** Grouped by when they are executed.  
+4. **Procedural Cohesion:** Grouped by a specific sequence of steps.  
+5. **Functional Cohesion:** All elements contribute to a single, well-defined task.
 
 ---
+
+## **Coupling**
+Coupling describes the **interdependence** between software modules.  
+- **Low coupling** → minimal dependencies, better modularity.  
+- **High coupling** → modules are tightly connected, making changes difficult.
+
+### **Types of Coupling (High → Low)**
+1. **Content Coupling:** One module directly modifies another's data.  
+2. **Common Coupling:** Uses shared global data.  
+3. **Control Coupling:** Passing control information (e.g., flags).  
+4. **Stamp Coupling:** Passing complex data structures.  
+5. **Data Coupling:** Passing only necessary data between modules.
+
+---
+
+## **Benefits of High Cohesion and Low Coupling**
+- **Improved Readability:** Modules with focused responsibilities are easier to understand.  
+- **Enhanced Maintainability:** Changes in one module have minimal impact on others.  
+- **Increased Reusability:** Cohesive, loosely coupled modules can be reused across applications.  
+- **Better Testing:** Independent modules are easier to test.  
+- **Simplified Debugging:** Self-contained modules make locating issues easier.  
+- **Scalability:** Systems can grow or evolve with minimal disruptions.
+
+---
+
+
 
 # **Conclusion**
 
